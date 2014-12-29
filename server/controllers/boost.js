@@ -1,5 +1,6 @@
 var mongoose = require('mongoose'),
-    Boost = require('../models/boost');
+    Boost = require('../models/boost'),
+    Boom = require('boom');
 
 mongoose.connect('mongodb://localhost/boost');
 
@@ -24,10 +25,11 @@ module.exports = {
             Boost.findAll({date: {"$lte": timestamp.toFixed(0)}}, limit, offset, function(err, boosts) {
 
                 if(err) {
-                    console.log(err);
+                    return reply(Boom.badImplementation(err));
+                } else {
+                    return reply(boosts);
                 }
 
-                reply(boosts);
                 
             });
 
@@ -39,10 +41,10 @@ module.exports = {
             Boost.findById(request.params.id, function(err, boost) {
 
                 if(err) {
-                    console.log(err);
+                    return reply(Boom.badImplementation(err));
+                } else {
+                    return reply(boost);
                 }
-
-                reply(boost);
                 
             });
 
