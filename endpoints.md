@@ -19,14 +19,14 @@ This describes the Boost API routes incl the http method, description and any pa
 			<td align="center">GET</td>
 			<td>Retrieves JSON array of Boosts</td>
 			<td>Limit, offset</td>
-			<td align="center">N</td>
+			<td align="center">Y</td>
 		</tr>
 		<tr>
 			<td>/boosts/:id</td>
 			<td align="center">GET</td>
 			<td>Retrieves JSON object of single Boost matching :id</td>
 			<td>Boost's ObjectId</td>
-			<td align="center">N</td>
+			<td align="center">Y</td>
 		</tr>
 		<tr>
 			<td>/boosts/:id/favourite</td>
