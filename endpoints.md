@@ -1,6 +1,8 @@
 Boost API Endpoints
 ===================
 
+This describes the Boost API routes incl the http method, description and any params to be sent. 
+
 <table>
 	<thead>
 		<tr>
@@ -16,7 +18,7 @@ Boost API Endpoints
 			<td>/boosts</td>
 			<td align="center">GET</td>
 			<td>Retrieves JSON array of Boosts</td>
-			<td>Lkimit, offset</td>
+			<td>Limit, offset</td>
 			<td align="center">N</td>
 		</tr>
 		<tr>
