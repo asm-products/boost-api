@@ -19,6 +19,11 @@ module.exports = [
     },
     {
         method: 'GET',
+        path: '/boosts/{id}/favourite',
+        config: controller.boost.favourite
+    },
+    {
+        method: 'GET',
         path: '/{path*}',
         config: controller.base.missing
     }
