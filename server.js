@@ -3,10 +3,10 @@
 */
 var Hapi = require('hapi'),
     config = require('./server/config/settings'),
-    db = require('./server/config/db');
+    db = require('./server/config/db')(config.db_connection);
 
 // Create a server with a host, port, and options
-var server = Hapi.createServer('0.0.0.0', config.port);
+var server = Hapi.createServer(config.host, config.port);
 
 // Export the server to be required elsewhere.
 module.exports = server;

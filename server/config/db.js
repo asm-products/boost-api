@@ -1,3 +1,5 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/boost');
+module.exports = function(db) {
+	mongoose.connect(db);
+}
