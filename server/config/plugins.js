@@ -13,9 +13,6 @@ server.pack.register([
     {
         plugin: require("good"),
         options: goodOptions
-    },
-    {
-        plugin: require("hapi-named-routes")
     }
 ], function(err) {
     if (err) throw err;
