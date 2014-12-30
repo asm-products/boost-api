@@ -2,7 +2,8 @@
 * Dependencies.
 */
 var Hapi = require('hapi'),
-    config = require('./server/config/settings');
+    config = require('./server/config/settings'),
+    db = require('./server/config/db');
 
 // Create a server with a host, port, and options
 var server = Hapi.createServer('0.0.0.0', config.port);
